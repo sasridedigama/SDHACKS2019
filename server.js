@@ -11,6 +11,10 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/pages/index.html');
 });
 
+app.post('/insertData', function(req, res) {
+    console.log("Got a post request");
+});
+
 // Handle 404 errors
 app.get('*', function(req, res) {
     console.log("Sending 404");
