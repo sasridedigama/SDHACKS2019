@@ -1,17 +1,24 @@
 {
-  "name": "sd-hacks",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "mlh-hackathon-nodejs-starter",
+  "version": "0.1.0",
+  "description": "A hackathon starting point for new Nodejs applications",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon app/index.js",
+    "deploy": "NODE_ENV=production node app/index.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "http": "0.0.0"
+    "axios": "^0.18.0",
+    "compression": "^1.7.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.1",
+    "pg": "^7.8.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": ">=5.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
