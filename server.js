@@ -5,9 +5,16 @@ const bodyParser = require('body-parser');
 const app = express(); 
 const server = http.createServer(app);
 
+// Send homepage by default
 app.get('/', function(req, res) {
-    console.log('Got a get request');
-    res.send('HI!!');
+    console.log("Sending index.html page...");
+    res.sendFile(__dirname + '/pages/index.html');
+});
+
+// Handle 404 errors
+app.use(function(req, res) {
+    console.log("Sending 404");
+    res.status('404').sendFile(__dirname + '/pages/404.html');
 });
 
 // Server listening for an open port or will default to 3001
