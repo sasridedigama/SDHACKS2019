@@ -12,7 +12,7 @@ app.get('/', function(req, res) {
 });
 
 // Handle 404 errors
-app.use(function(req, res) {
+app.get('*', function(req, res) {
     console.log("Sending 404");
     res.status('404').sendFile(__dirname + '/pages/404.html');
 });
